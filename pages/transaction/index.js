@@ -26,7 +26,7 @@ const q = context.query.q.toString();
   const pureData = await fetch(`https://rest.cryptoapis.io/blockchain-data/ethereum/goerli/addresses/${q}/transactions?context=yourExampleString&limit=20&offset=0`, {
     "headers": {
       "Content-Type": "application/json",
-      "X-API-Key": apiKey ,
+      "X-API-Key": "33b2d073b8a2828c996e1aabdc694680bec64a2b" ,
     }
   })
 

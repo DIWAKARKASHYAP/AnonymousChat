@@ -7,7 +7,7 @@ import { Abi, byteCode } from "../../components/contract";
 import Nav from "../../components/nav";
 
 const CreateChat = () => {
-    let [address, setAddress] = useState("");
+    const [address, setAddress] = useState("");
     // console.log(address);
 
     let core = address;
@@ -94,7 +94,7 @@ const CreateChat = () => {
                                         setAddress(e.target.value);
                                     }}
                                     type="text"
-                                    id="voice-search"
+                                    
                                     className=" border text-sm rounded-lg   block w-full pl-10 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                                     placeholder="write chat address of second person..."
                                     required

@@ -33,12 +33,12 @@ const Nav = () => {
                         className="flex items-center"
                     >
                         <img
-                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKQhDIPS1kvzhajOW4d0fyHAs8qav6fR5OFGK7vn6QhD7ojfSnJhjbs3kKuQgtBzHfRVXJ2ycLOxVLFA2vhjbp3qUksJRnEbO-7qZBcNdkeQwle-Szh3GD0e0Dvdj6Mtf3RnOEsYxSLWvXacES_oGys8BKzL1zMvKFtzFFLovsI5jZLlRMgdhvp_gW/s500/A%20letter%20tech%20logo.png"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiG8D7QD3f5dMQwa10YH-Uu5rZx5_cO4g11gGw3AP5HbLGKBoqKcZj1zN_7J8oAwHEudgPW5fI5fgaEBIkbNOZq1zTGuK5wuak26ox16BtDrp6K23LmHZutP-R1h21G23IqKQxH8511t-UaQElYey-9zX-XERddZIS73clCV0hyAH7qA_Tlv9Wh0mup/s500/Gold%20Luxury%20Initial%20Circle%20Logo.png"
                             className="h-8 mr-3"
                             alt="Flowbite Logo"
                         />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-                        AnonymousChat
+                        Diwakar Kashyap
                         </span>
                     </span>
                     <button

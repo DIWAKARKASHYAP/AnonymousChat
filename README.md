@@ -18,6 +18,7 @@ Experience the power of decentralized ETH payment and chat with our web applicat
 
 
 # Start Now
+watch this https://www.youtube.com/watch?v=hRCHz9SH4Tg
 
 1- signup with metamask an click on [Start Now](https://anonymous-chat-pi.vercel.app/chatOption)
 <img width="960" alt="Screenshot 2023-06-05 235323" src="https://github.com/DIWAKARKASHYAP/AnonymousChat/assets/94478026/90dfddce-3151-4338-a955-111ae0c3874b">

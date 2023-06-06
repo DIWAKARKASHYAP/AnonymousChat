@@ -1,4 +1,4 @@
-# Anonymous Chat
+# Anonymous Chat Created by Diwakar Kashyap
 https://anonymous-chat-pi.vercel.app
 
 Experience the power of decentralized ETH payment and chat with our web application. Enjoy undeleatable functionality and monitor your transactions with in real-time with CryptoApi for ultimate security and convenience.

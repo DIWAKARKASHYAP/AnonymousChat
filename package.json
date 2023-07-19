@@ -12,6 +12,7 @@
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.3",
+    "@vercel/analytics": "^1.0.1",
     "ethers": "5.7.2",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.7",

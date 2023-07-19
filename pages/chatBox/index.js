@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 
 import { Abi } from "../../components/contract";
@@ -61,7 +61,6 @@ const ChatBox = () => {
     // console.log(Address);
 
     const getData = async () => {
-
         document.getElementById("message").innerHTML = "";
 
         const chatAddress =
@@ -106,48 +105,27 @@ const ChatBox = () => {
                     const message = await contractInstance.allMessages(i);
 
                     if (address[0] === (await signer.getAddress())) {
-                        document.getElementById("addressOne").innerHTML =
-                            address[1];
+                        document.getElementById("addressOne").innerHTML = address[1];
 
-                        document.getElementById("recipientAddress").value =
-                            address[1];
+                        document.getElementById("recipientAddress").value = address[1];
 
                         if (message.slice(-1) === "1") {
                             document.getElementById(
                                 "message"
-                            ).innerHTML += `<div id="messageTwo"  > ${message.slice(
-                                0,
-                                -1
-                            )} </div>`;
+                            ).innerHTML += `<div id="messageTwo"  > ${message.slice(0,-1)} </div>`;
                         } else {
                             document.getElementById(
                                 "message"
-                            ).innerHTML += `<div id="messageOne"  > ${message.slice(
-                                0,
-                                -1
-                            )} </div>`;
+                            ).innerHTML += `<div id="messageOne"  > ${message.slice(0,-1)} </div>`;
                         }
                     } else if (address[1] === (await signer.getAddress())) {
-                        document.getElementById("addressOne").innerHTML =
-                            address[0];
-
-                        document.getElementById("recipientAddress").value =
-                            address[0];
+                        document.getElementById("addressOne").innerHTML = address[0];
+                        document.getElementById("recipientAddress").value = address[0];
 
                         if (message.slice(-1) === "2") {
-                            document.getElementById(
-                                "message"
-                            ).innerHTML += `<div id="messageTwo"  > ${message.slice(
-                                0,
-                                -1
-                            )} </div>`;
+                            document.getElementById("message").innerHTML += `<div id="messageTwo"  > ${message.slice(0,-1)} </div>`;
                         } else {
-                            document.getElementById(
-                                "message"
-                            ).innerHTML += `<div id="messageOne"  > ${message.slice(
-                                0,
-                                -1
-                            )} </div>`;
+                            document.getElementById("message").innerHTML += `<div id="messageOne"  > ${message.slice(0,-1)} </div>`;
                         }
                     }
                 }
@@ -172,21 +150,24 @@ const ChatBox = () => {
 
         const message = document.getElementById("messageInput").value;
 
-        await Instance.messageInput(message);
+        let recipt = await Instance.messageInput(message);
 
         document.getElementById("messageInput").value = "";
+        let runGetData = await recipt.wait();
+
+        // console.log(runGetData);
+
+        if (runGetData) {
+            // console.log("hellow");
+            checkUpdate();
+        }
     };
 
     const checkUpdate = async () => {
         const numberLength = await Instance.arrayMessageLength();
-
         const number = (await ethers.utils.formatEther(numberLength)) * 10e17;
-
         // console.log("interval");
-
         if (MessageCount !== number) {
-            // console.log("length is not match");
-
             await getData();
         }
     };
@@ -198,6 +179,7 @@ const ChatBox = () => {
             setHidden("hidden");
         }
     };
+
     return (
         <>
             <Nav />
@@ -219,7 +201,7 @@ const ChatBox = () => {
                                         aria-hidden="true"
                                         fill="none"
                                         stroke="currentColor"
-                                        stroke-width="1.5"
+                                        strokeWidth="1.5"
                                         viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
@@ -387,8 +369,8 @@ const ChatBox = () => {
                         </div>
                         <div className="text-slate-400 mt-4">
                             {" "}
-                            after you recieve transaction confirmed message from
-                            metemask then simpaly click on refresh
+                            if you not see any update then please run in 30
+                            second after send message then please run Refresh
                         </div>
 
                         <button

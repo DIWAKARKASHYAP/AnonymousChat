@@ -3,16 +3,63 @@ import React from "react";
 const Main = () => {
     return (
         <div className="max-w-4xl  mt-28 m-auto">
-            
             <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl text-white text-center">
                 Chat and Pay Now
             </h1>
             <p className="mb-6 text-lg font-normal  lg:text-xl sm:px-16  text-gray-400 text-center">
-            Experience the power of decentralized ETH payment and chat with our web application. Enjoy undeleatable functionality and monitor your transactions with in real-time with <span className=" text-slate-300 font-semibold"> CryptoApi</span> for ultimate security and convenience.
+                Experience the power of decentralized ETH payment and chat with
+                our web application. Enjoy undeleatable functionality and
+                monitor your transactions with in real-time with{" "}
+                <span className=" text-slate-300 font-semibold">
+                    {" "}
+                    CryptoApi
+                </span>{" "}
+                for ultimate security and convenience.
             </p>
-<a href="./chatOption">
 
-            <button
+            <p className="mb-6 text-lg font-normal  lg:text-xl sm:px-16  text-gray-400  ">
+                <div className="mb-3">Please read the following information carefully:</div>
+                <div className="mb-3">
+                    Our website facilitates anonymous chats between individuals.
+                    You can easily access your chat by using a unique chat
+                    address. However, please be aware that if you lose your chat
+                    address, neither you nor the other person will be able to
+                    retrieve the chat.
+                </div>
+                <div>
+                    To make full use of our system, you only need two things:
+                </div>
+
+                <ul className="mb-3">
+                    <li>1- A browser with Metamask installed.</li>
+                    <li>
+                        2- A sufficient amount of Gorile ethers in your Metamask
+                        account.
+                    </li>
+                </ul>
+
+                <div >
+                    On this website, you have the ability to perform three
+                    actions:
+                </div>
+                
+                    <ol className="mb-3">
+                        <li>1- Create a personal chatbox for your own use.</li>
+                        <li>
+                            2- If you have a chat address, you can perform any
+                            task if it belongs to you. However, if the chat
+                            address belongs to someone else, you will only have
+                            read access to the chat.
+                        </li>
+                        <li>
+                            3- You can only send messages within your own chat.
+                        </li>
+                    </ol>
+                
+            </p>
+
+            <a href="./chatOption">
+                <button
                     type="button"
                     className="m-auto text-white flex bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-800 font-medium rounded-lg  px-5  text-center mb-2  py-3 text-base  "
                 >
@@ -33,7 +80,7 @@ const Main = () => {
                         ></path>
                     </svg>{" "}
                 </button>
-</a>
+            </a>
         </div>
     );
 };
